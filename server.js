@@ -19,8 +19,8 @@ app.get('/', function(request, response) {
 app.use('/js', express.static(__dirname + '/client/js'));
 
 //This is the post request that get initiated from the client - findWeather was supposed to be where the ajax call happened
-app.post('/weather', weatherController.findWeather);
+// app.post('/weather', weatherController.findWeather);
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
 	console.log('I\'m Listening...');
 })
