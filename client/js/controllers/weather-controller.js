@@ -11,7 +11,7 @@ app.controller('weatherController', ['$scope', '$resource', '$http', function($s
 	$scope.getWeather = function(){
 		$scope.city = $scope.weatherCity;
 		$scope.state = $scope.weatherState;
-		$scope.temp = weather($scope.weatherCity, $scope.WeatherState);
+		$scope.temp = weather($scope.weatherCity, $scope.weatherState);
 		// weather.$save(function(result){
 		// 	$scope.temp = result.temp;
 		// });
