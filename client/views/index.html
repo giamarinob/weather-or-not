@@ -10,14 +10,17 @@
   	<script type='text/javascript' src='/js/controllers/weather-controller.js'></script>
   </head>
   <body>
-  	<div ng-controller='weatherController'>
+  	<div id='controller' ng-controller='weatherController'>
 	  	<form ng-submit='getWeather()'>
 	  		<input type='text' placeholder='city' ng-model='weatherCity'></input>
 	  		<input type='text' placeholder='state' ng-model='weatherState'></input>
 	  		<button type='submit'>Get Weather</button>
 	  	</form>
-  		<p>You're looking for the weather in {{city}}, {{state}}</p>
-  		<p>The temp outside is {{temp}}</p>
+	  	<div ng-show='show'>
+  			<p>You're looking for the weather in {{city}}, {{state}}</p>
+  			<p>The temp outside is {{temp}}</p>
+  	  </div>
+  		<p ng-show='errorBlock'>{{err}}</p>
   	</div>
   </body>
 </html>
