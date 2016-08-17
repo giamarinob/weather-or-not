@@ -3,7 +3,7 @@
 
 function weather(city, state){
 	var key = '668716cbf587902f';
-	var url = 'http://api.wunderground.com/api/' + key + '/conditions/q/' + state + '/' + city + '.json';
+	var url = 'https://api.wunderground.com/api/' + key + '/conditions/q/' + state + '/' + city + '.json';
   var temp = 0;
 
   //make the ajax call to the api
