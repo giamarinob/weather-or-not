@@ -2,9 +2,9 @@
   "name": "weather-or-not",
   "version": "0.0.1",
   "dependencies": {
+    "async": "^2.0.1",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
-    "jquery": "^3.1.0",
-    "jsdom": "^9.4.2"
+    "request": "^2.74.0"
   }
 }
