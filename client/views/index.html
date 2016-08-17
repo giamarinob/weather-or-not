@@ -2,6 +2,7 @@
 <html ng-app='weatherApp'>
   <head>
   	<title>Talk About The Weather</title>
+    <link rel="stylesheet" type="text/css" href="/css/application.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js'></script>
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.js'></script>
@@ -11,16 +12,17 @@
   </head>
   <body>
   	<div id='controller' ng-controller='weatherController'>
+      <h1 id='header'>What's The Temp Outside?</h1>
 	  	<form ng-submit='getWeather()'>
 	  		<input type='text' placeholder='city' ng-model='weatherCity'></input>
 	  		<input type='text' placeholder='state' ng-model='weatherState'></input>
 	  		<button type='submit'>Get Weather</button>
 	  	</form>
 	  	<div ng-show='show'>
-  			<p>You're looking for the weather in {{city}}, {{state}}</p>
-  			<p>The temp outside is {{temp}}</p>
+  			<p class='message'>You're looking for the weather in {{city}}, {{state}}</p>
+  			<p class='message'>The temp outside is {{temp}}</p>
   	  </div>
-  		<p ng-show='errorBlock'>{{err}}</p>
+  		<p class='message' ng-show='errorBlock'>{{err}}</p>
   	</div>
   </body>
 </html>

@@ -4,8 +4,10 @@ var express           = require('express'),
     weatherController = require('./server/controllers/weather-controller');
 
 
-//Use middleware to serve up files from /client/js whenever someone requests js files from express
+//Use middleware to serve up files from /client/js whenever someone requests js or css files from express
 app.use('/js', express.static(__dirname + '/client/js'));
+app.use('/css', express.static(__dirname + '/client/css'));
+app.use('/imgs', express.static(__dirname + '/client/imgs'));
 
 //Inject Body Parser to auto parse request bodies
 app.use(bodyParser.urlencoded({
